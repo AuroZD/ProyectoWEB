@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <!-- Fondo de la barra de navegación -->
+        <!-- Fondo de la barra de navegacion -->
         <div class="fondo-barra"></div>
         
         <!-- Logo clickeable que lleva al inicio -->
@@ -18,7 +18,7 @@
             </a>
         </div>
         
-        <!-- Barra de opciones de navegación principal -->
+        <!-- Barra de opciones de navegacion principal -->
         <nav class="opciones-barra">
             <div class="opcion-nav"><a href="Menu.html">Menu</a></div>
             <div class="opcion-nav"><a href="Galeria.html">Galeria</a></div>
@@ -27,78 +27,157 @@
         </nav>
     </header>
 
-    <!-- Contenido principal de la página -->
+    <!-- Contenido principal de la pagina -->
     <main class="contenido-principal"> 
         <h1>Panaderia "LA UNO"</h1>   
         
-        <!-- Contenedor principal reutilizable -->
-        <div class="contenedor-flex">
-            <div class="contenedor-texto">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eaque optio dicta cum molestiae sequi? Ipsum maiores aperiam perferendis quia reprehenderit ut rerum culpa, 
-                repellat qui consequuntur, vitae odit vero?</p>
-            </div>
-            <div class="contenedor-imagen">
-                <img src="imagenprovicional.jpg" alt="imagencomida">
-            </div>
-        </div>
-        
-        <!-- CONTENEDOR DE PROMOCIONES CON 4 IMÁGENES -->
-        <section class="seccion-promociones">
-            <h2>Promociones Especiales</h2>
-            <p>Descubre nuestras ofertas exclusivas de la semana</p>
-            
-            <!-- Contenedor con ID para promociones -->
-            <div id="contenedor-promociones" class="contenedor-promociones">
-                <!-- Promoción 1 -->
-                <div class="promocion-item">
-                    <img src="promo1.jpg" alt="Promoción 1 - Pan Francés" class="imagen-promocion">
-                    <div class="info-promocion">
-                        <h3>Pan Francés x2</h3>
-                        <p class="precio-original">$50.00</p>
-                        <p class="precio-promocion">$35.00</p>
-                        <span class="descuento">30% OFF</span>
+        <!-- Contenedor de bienvenida -->
+        <section class="seccion-menu">
+            <h2 class="titulo-categoria">¡Bienvenidos a LA UNO!</h2>
+            <div class="contenedor-items">
+                <div class="item-menu con-imagen">
+                    <div class="info-item">
+                        <h3>El Sabor de lo Autentico</h3>
+                        <p>En Panaderia LA UNO nos enorgullece ofrecer productos artesanales elaborados con los mejores ingredientes y la mejor calidad.</p>
+                    </div>
+                    <div class="contenedor-imagen-item">
+                        <img src="panaderia-interior.jpg" alt="Interior de la panaderia">
                     </div>
                 </div>
-                
-                <!-- Promoción 2 -->
-                <div class="promocion-item">
-                    <img src="promo2.jpg" alt="Promoción 2 - Conchas" class="imagen-promocion">
-                    <div class="info-promocion">
-                        <h3>Docena de Conchas</h3>
-                        <p class="precio-original">$180.00</p>
-                        <p class="precio-promocion">$120.00</p>
-                        <span class="descuento">33% OFF</span>
-                    </div>
-                </div>
-                
-                <!-- Promoción 3 -->
-                <div class="promocion-item">
-                    <img src="promo3.jpg" alt="Promoción 3 - Cuernitos" class="imagen-promocion">
-                    <div class="info-promocion">
-                        <h3>Cuernitos Mix</h3>
-                        <p class="precio-original">$240.00</p>
-                        <p class="precio-promocion">$180.00</p>
-                        <span class="descuento">25% OFF</span>
-                    </div>
-                </div>
-                
             </div>
         </section>
 
-        <div class="contenedor-flex">
-            <div class="contenedor-texto">
-                <h2></h2>
-                <p>
-                Orgullosos de nuestra primera sucursal en metro "Division del norte"
-                </p>
+        <!-- CONTENEDOR DE PROMOCIONES REALES -->
+        <section class="seccion-menu">
+            <h2 class="titulo-categoria">Promociones de la Semana</h2>
+            <p class="descripcion-categoria">Aprovecha estas increibles ofertas por tiempo limitado</p>
+            
+            <div class="contenedor-items columnas-dobles">
+                <!-- Columna 1 -->
+                <div class="columna-items">
+                    <!-- Promocion 1 -->
+                    <div class="item-menu con-imagen">
+                        <div class="info-item">
+                            <h3>Combo Desayuno UNO - <span class="precio">$95</span></h3>
+                            <p>Croissant LA UNO + Cafe Americano 12oz</p>
+                            <p class="precio-original">Precio normal: $110</p>
+                            <span class="descuento">14% OFF</span>
+                        </div>
+                        <div class="contenedor-imagen-item">
+                            <img src="combo-desayuno.jpg" alt="Combo Desayuno">
+                        </div>
+                    </div>
+                    
+                    <!-- Promocion 2 -->
+                    <div class="item-menu con-imagen">
+                        <div class="info-item">
+                            <h3>Bocadillo + Bebida - <span class="precio">$85</span></h3>
+                            <p>Cualquier bocadillo + Refresco 600ml o Cafe</p>
+                            <p class="precio-original">Precio normal: $97-$105</p>
+                            <span class="descuento">Hasta 19% OFF</span>
+                        </div>
+                        <div class="contenedor-imagen-item">
+                            <img src="bocadillo-bebida.jpg" alt="Bocadillo con Bebida">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Columna 2 -->
+                <div class="columna-items">
+                    <!-- Promocion 3 -->
+                    <div class="item-menu con-imagen">
+                        <div class="info-item">
+                            <h3>Docena de Conchas - <span class="precio">$150</span></h3>
+                            <p>Lleva 12 conchas esponjosas a precio especial</p>
+                            <p class="precio-original">Precio normal: $180</p>
+                            <span class="descuento">17% OFF</span>
+                        </div>
+                        <div class="contenedor-imagen-item">
+                            <img src="docena-conchas.jpg" alt="Docena de Conchas">
+                        </div>
+                    </div>
+                    
+                    <!-- Promocion 4 -->
+                    <div class="item-menu con-imagen">
+                        <div class="info-item">
+                            <h3>Combo Familiar - <span class="precio">$220</span></h3>
+                            <p>4 Bocadillos + 2 Bebidas grandes</p>
+                            <p class="precio-original">Precio normal: $280</p>
+                            <span class="descuento">21% OFF</span>
+                        </div>
+                        <div class="contenedor-imagen-item">
+                            <img src="combo-familiar.jpg" alt="Combo Familiar">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="contenedor-imagen" >
-                <img src="imagenprovicional.jpg" alt="imagenrestaurante" id="">
+        </section>
+
+        <!-- Seccion de Especialidades -->
+        <section class="seccion-menu">
+            <h2 class="titulo-categoria">Nuestras Especialidades</h2>
+            
+            <div class="contenedor-items">
+                <!-- Especialidad 1 -->
+                <div class="item-menu con-imagen">
+                    <div class="info-item">
+                        <h3>Bocadillos Artesanales</h3>
+                        <p>Descubre nuestra variedad de bocadillos elaborados con pan recien horneado y ingredientes de la mas alta calidad. Elige entre 5 tipos diferentes de pan y combinaciones unicas de sabores.</p>
+                        <p><strong>Desde $75</strong></p>
+                    </div>
+                    <div class="contenedor-imagen-item">
+                        <img src="especialidad-bocadillos.jpg" alt="Bocadillos Artesanales">
+                    </div>
+                </div>
+                
+                <!-- Especialidad 2 -->
+                <div class="item-menu con-imagen">
+                    <div class="info-item">
+                        <h3>Panaderia Tradicional</h3>
+                        <p>Conchas, cuernitos, hojaldras y bisquets elaborados al estilo tradicional. El autentico sabor de la panaderia mexicana que tanto amas.</p>
+                        <p><strong>Desde $35</strong></p>
+                    </div>
+                    <div class="contenedor-imagen-item">
+                        <img src="especialidad-pan.jpg" alt="Panaderia Tradicional">
+                    </div>
+                </div>
+                
+                <!-- Especialidad 3 -->
+                <div class="item-menu con-imagen">
+                    <div class="info-item">
+                        <h3>Bebidas Especiales</h3>
+                        <p>Desde el clasico cafe americano hasta nuestros exclusivos frappes y smoothies. Mas de 20 sabores diferentes para complementar tu experiencia.</p>
+                        <p><strong>Desde $28</strong></p>
+                    </div>
+                    <div class="contenedor-imagen-item">
+                        <img src="especialidad-bebidas.jpg" alt="Bebidas Especiales">
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Seccion de Ubicacion -->
+        <section class="seccion-menu">
+            <h2 class="titulo-categoria">¡Te Esperamos!</h2>
+            
+            <div class="contenedor-items">
+                <div class="item-menu con-imagen">
+                    <div class="info-item">
+                        <h3>Primera Sucursal</h3>
+                        <p>Estamos orgullosos de anunciar nuestra primera sucursal ubicada estrategicamente en Metro "Division del Norte".</p>
+                        <p><strong>Horarios:</strong><br>
+                        Lunes a Viernes: 7:00 AM - 9:00 PM
+                        </p>
+                    </div>
+                    <div class="contenedor-imagen-item">
+                        <img src="sucursal-division-norte.jpg" alt="Sucursal Division del Norte">
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Pie de página -->
+    <!-- Pie de pagina -->
     <footer class="pie-pagina">
         <div class="contenedor-pie">    
             <p>Aureliano</p>

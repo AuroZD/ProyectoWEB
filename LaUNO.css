@@ -2,27 +2,25 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: blanchedalmond;
+    background-color: #f8f4e9; /* Beige claro mas suave */
     font-family: Arial, sans-serif;
 }
 
-/* Header y Barra de navegacion */
+/* ===== HEADER Y BARRA DE NAVEGACION ===== */
 
-/* Fondo de la barra de navegacion 
-fija en la parte superior */
+/* Fondo de la barra de navegacion fija */
 .fondo-barra {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: oldlace;
+    background-color: #8B4513; /* Cafe chocolate */
     width: 100%;
     height: 100px;
     z-index: 10;
-    /* Evita que el fondo se salga de los límites */
     box-sizing: border-box;
 }
 
-/* Logo posicionado en la esquina superior izquierda */
+/* Logo posicionado en esquina superior izquierda */
 .logo-uno {
     position: fixed;
     top: 0px;    
@@ -30,199 +28,294 @@ fija en la parte superior */
     z-index: 20;
 }
 
-/* Ajusta la imagen del logo con altura fija y proporciones automáticas */
+/* Ajusta la imagen del logo */
 .logo-uno img {
     display: block;
     height: 100px;
     width: auto;
 }
 
-/* Barra de opciones de navegación principal */
+/* Barra de opciones de navegacion principal */
 .opciones-barra {
     display: flex;
     position: fixed;
     top: 0;
-    /* Distancia calculada para no chocar con el logo */
     left: 110px;
-    background-color: aqua;
+    background-color: #A0522D; /* Cafe sienna */
     height: 100px;
-    /* Ancho calculado que se adapta para evitar el logo */
     width: calc(100% - 110px); 
     z-index: 15;
-    /* Distribuye el espacio uniformemente entre las opciones */
     justify-content: space-around; 
     align-items: center;
     padding: 0 10px;
-    /* Evita que la barra se salga de los límites */
     box-sizing: border-box;
     max-width: 100%;
 }
 
-/* Cada opción de navegación se adapta al tamaño disponible */
+/* Cada opcion de navegacion */
 .opcion-nav {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;   
     height: 80%;
-    background-color: rgb(166, 238, 107);
+    background-color: #DEB887; /* Cafe claro */
     margin: 0 5px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    /* Previene que los elementos se desborden */
     min-width: 0;
     overflow: hidden;
 }
 
 /* Efecto hover */
 .opcion-nav:hover {
-    background-color: rgb(140, 220, 80);
+    background-color: #CD853F; /* Cafe peru */
 }
 
-/* Estilos para los enlaces de navegación */
+/* Estilos para los enlaces de navegacion */
 .opcion-nav a {
-    /* Quita la decoración subrayada 
-    por defecto de los links */
     text-decoration: none;
-    color: #333;
+    color: #5D4037; /* Cafe oscuro */
     font-weight: bold;
     font-size: 16px;
     text-align: center;
     width: 100%;
     padding: 10px 0;
-
 }
 
-/* Contenido Principal */
+/* ===== ESTILOS PARA PROMOCIONES EN INDEX ===== */
 
-/* Contenedor principal del contenido de la página */
+/* Precio original tachado */
+.precio-original {
+    color: #795548;
+    text-decoration: line-through;
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+/* Etiqueta de descuento */
+.descuento {
+    display: inline-block;
+    background: #E53935;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+/* Destacar precios de promociones */
+.item-menu .precio {
+    font-size: 1.3rem;
+    color: #D32F2F;
+}
+
+/* Estilos para textos destacados */
+.info-item strong {
+    color: #8B4513;
+}
+
+/* Mejorar espaciado en items con mucha informacion */
+.item-menu.con-imagen .info-item {
+    padding-right: 10px;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+
+/* Contenedor principal del contenido */
 .contenido-principal {
-    margin: 160px 20px 20px 20px; 
-    /* Margen superior para evitar 
-    superposición con header fijo */
-    background-color: rgb(146, 23, 1);
+    margin: 160px 20px 20px 20px;
+    background-color: #FFFFFF; /* Fondo blanco para mejor legibilidad */
     padding: 20px;
     border-radius: 8px;
-    color: white;
+    color: #5D4037; /* Texto cafe oscuro */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Estilos para los títulos principales */
+/* Titulo principal */
 .contenido-principal h1 {
     text-align: center;
     margin-bottom: 20px;
-    color: black;
+    color: #8B4513; /* Cafe chocolate */
 }
 
-/* Contenedor flexible reutilizable para organizar contenido */
-.contenedor-flex {
+/* ===== ESTILOS ESPECIFICOS PARA EL MENU ===== */
+
+/* Seccion de categoria del menu */
+.seccion-menu {
+    margin: 30px 0;
+    padding: 25px;
+    background: #FFF8E1; /* Amarillo muy claro */
+    border-radius: 10px;
+    border: 2px solid #D4A574; /* Cafe claro */
+}
+
+/* Titulo de categoria principal */
+.titulo-categoria {
+    color: #8B4513; /* Cafe chocolate */
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #D4A574;
+    padding-bottom: 8px;
+}
+
+/* Descripcion de categoria */
+.descripcion-categoria {
+    color: #795548; /* Cafe medio */
+    font-style: italic;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+/* Subtitulo de subcategoria */
+.subtitulo-categoria {
+    color: #A0522D; /* Cafe sienna */
+    font-size: 1.3rem;
+    margin: 25px 0 15px 0;
+    padding-left: 10px;
+    border-left: 4px solid #D4A574;
+}
+
+/* Contenedor de items del menu */
+.contenedor-items {
     display: flex;
-    gap: 30px;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #98a89d;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #000000;
-    margin-bottom: 20px; /* Espacio entre contenedores reutilizables */
+    flex-direction: column;
+    gap: 15px;
 }
 
-/* Contenedor de texto flexible que ocupa el espacio disponible */
-.contenedor-texto {
-    flex: 1;
+/* Item individual del menu */
+.item-menu {
+    background: #FFFFFF;
     padding: 15px;
-    min-width: 0; /* Permite que el texto se ajuste correctamente */
+    border-radius: 8px;
+    border-left: 4px solid #D4A574;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-/* Estilos para el texto dentro de los contenedores */
-.contenedor-texto p {
+/* Efecto hover para items del menu */
+.item-menu:hover {
+    background: #FFF3E0;
+    transform: translateX(5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Item simple (sin descripcion) */
+.item-menu.simple {
+    color: #5D4037;
+    padding: 10px 15px;
+    border-left: 3px solid #BCAAA4;
+}
+
+/* Informacion del item */
+.info-item h3 {
+    color: #5D4037;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.info-item p {
+    color: #795548;
     margin: 0;
-    line-height: 1.6;
-    font-size: 16px;
+    line-height: 1.5;
+    font-size: 0.95rem;
 }
 
-/* Contenedor de imagen con tamaño fijo */
-.contenedor-imagen {
+/* Precio destacado */
+.precio {
+    color: #E53935; /* Rojo para precios */
+    font-weight: bold;
+}
+
+/* Nota especial del menu */
+.nota-menu {
+    background: #FFECB3;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px dashed #FFA000;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.nota-menu p {
+    margin: 0;
+    color: #8B4513;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Diseño de dos columnas para items simples */
+.columnas-dobles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.columna-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ===== CONTENEDORES DE IMAGEN PARA ITEMS DEL MENU ===== */
+
+/* Contenedor principal del item con imagen */
+.item-menu.con-imagen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+}
+
+/* Informacion del item (lado izquierdo) */
+.info-item {
+    flex: 1;
+}
+
+/* Contenedor de imagen para alimentos (lado derecho) */
+.contenedor-imagen-item {
     flex-shrink: 0;
-    /* Tamaño fijo  */
-    width: 200px;
-    height: 200px;
-    background-color: #f0f0f0;
-    padding: 10px;
-    border: 1px solid #d1d1d1;
+    width: 120px;
+    height: 120px;
+    background-color: #FAFAFA;
+    padding: 8px;
+    border: 1px solid #E0E0E0;
     border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Asegura que la imagen no deforme el contenedor */
     overflow: hidden;
 }
 
-/* Estilos para las imágenes dentro de los contenedores */
-.contenedor-imagen img {
+/* Imagen dentro del contenedor */
+.contenedor-imagen-item img {
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
     border-radius: 5px;
 }
 
-/* Pie de pagina*/
+/* Items simples con imagen */
+.item-menu.simple.con-imagen {
+    padding: 10px 15px;
+    align-items: center;
+}
 
-/* Contenedor del pie de página */
+/* ===== PIE DE PAGINA ===== */
+
+/* Contenedor del pie de pagina */
 .pie-pagina {
-    background-color: #2c3e50;
-    color: white;
+    background-color: #5D4037; /* Cafe oscuro */
+    color: #FFFFFF;
     padding: 20px;
     text-align: center;
     margin-top: 40px;
 }
 
-/* Contenedor interno para el contenido del pie de página */
+/* Contenedor interno para el contenido del pie de pagina */
 .contenedor-pie {
     max-width: 1200px;
     margin: 0 auto;
-}
-
-/*Modificaciones a ID*/
-
-/* Sección contenedora de las promociones */
-.seccion-promociones {
-    margin: 40px 0;
-    padding: 30px;
-    background: linear-gradient(135deg, #fff5e6, #ffe4cc);
-    border-radius: 15px;
-    border: 2px solid #ffb366;
-}
-
-/* Títulos de la sección promociones */
-.seccion-promociones h2 {
-    text-align: center;
-    color: #cc6600;
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-}
-
-.seccion-promociones p {
-    text-align: center;
-    color: #666;
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-}
-
-/* Contenedor principal de promociones con ID específico */
-#contenedor-promociones {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    padding: 20px;
-}
-
-/* Cada item de promoción individual */
-.promocion-item {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-    border: 1px solid #ffe0b3;
 }
