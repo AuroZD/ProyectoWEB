@@ -6,49 +6,60 @@ html, body {
     font-family: Arial, sans-serif;
 }
 
-/* Header y Navegacion */
-#FondoBarra {
+/* Header y Barra de navegacion */
+
+/* Fondo de la barra de navegacion 
+fija en la parte superior */
+.fondo-barra {
     position: fixed;
     top: 0;
     left: 0;
     background-color: oldlace;
     width: 100%;
-    height: 150px;
+    height: 100px;
     z-index: 10;
+    /* Evita que el fondo se salga de los límites */
+    box-sizing: border-box;
 }
-/*Fijar logo en la esquina superior izquierda*/
-#LogoUNO {
+
+/* Logo posicionado en la esquina superior izquierda */
+.logo-uno {
     position: fixed;
     top: 0px;    
     left: 1%;
     z-index: 20;
 }
-/*Acomoda la imagen para tener una medida de 150 de alto*/
-#LogoUNO img {
+
+/* Ajusta la imagen del logo con altura fija y proporciones automáticas */
+.logo-uno img {
     display: block;
-    height: 150px;
+    height: 100px;
     width: auto;
 }
 
-#OpcionesBarra {
+/* Barra de opciones de navegación principal */
+.opciones-barra {
     display: flex;
     position: fixed;
     top: 0;
-     /*Distancia para no chocar con el logo*/
-    left: 160px;
+    /* Distancia calculada para no chocar con el logo */
+    left: 110px;
     background-color: aqua;
-    height: 150px;
-    /* Acomoda el ancho para que no cambie aunque se cambie
-    el tamaño de la pestaña */
-    width: calc(100% - 160px); 
+    height: 100px;
+    /* Ancho calculado que se adapta para evitar el logo */
+    width: calc(100% - 110px); 
     z-index: 15;
-    /* Distribuye el espacio uniformemente */
+    /* Distribuye el espacio uniformemente entre las opciones */
     justify-content: space-around; 
     align-items: center;
     padding: 0 10px;
+    /* Evita que la barra se salga de los límites */
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
-#OpcionesBarra div {
+/* Cada opción de navegación se adapta al tamaño disponible */
+.opcion-nav {
     flex: 1;
     display: flex;
     justify-content: center;
@@ -58,14 +69,20 @@ html, body {
     margin: 0 5px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    /* Previene que los elementos se desborden */
+    min-width: 0;
+    overflow: hidden;
 }
 
-/*Cuando el usuario pone el cursor cambia el color*/
-#OpcionesBarra div:hover {
+/* Efecto hover */
+.opcion-nav:hover {
     background-color: rgb(140, 220, 80);
 }
 
-#OpcionesBarra a {
+/* Estilos para los enlaces de navegación */
+.opcion-nav a {
+    /* Quita la decoración subrayada 
+    por defecto de los links */
     text-decoration: none;
     color: #333;
     font-weight: bold;
@@ -73,25 +90,31 @@ html, body {
     text-align: center;
     width: 100%;
     padding: 10px 0;
+
 }
 
-/* Contenido principal */
-#contenido {
-    margin: 160px 20px 20px 20px; /* Aumenté el margen superior para evitar superposición */
+/* Contenido Principal */
+
+/* Contenedor principal del contenido de la página */
+.contenido-principal {
+    margin: 160px 20px 20px 20px; 
+    /* Margen superior para evitar 
+    superposición con header fijo */
     background-color: rgb(146, 23, 1);
     padding: 20px;
     border-radius: 8px;
     color: white;
 }
 
-/*Titilos */
-#contenido h1 {
+/* Estilos para los títulos principales */
+.contenido-principal h1 {
     text-align: center;
     margin-bottom: 20px;
     color: black;
 }
 
-.contenedor-principal {
+/* Contenedor flexible reutilizable para organizar contenido */
+.contenedor-flex {
     display: flex;
     gap: 30px;
     align-items: center;
@@ -100,23 +123,29 @@ html, body {
     padding: 20px;
     border-radius: 8px;
     border: 1px solid #000000;
+    margin-bottom: 20px; /* Espacio entre contenedores reutilizables */
 }
 
-.contenedor-principal .texto {
+/* Contenedor de texto flexible que ocupa el espacio disponible */
+.contenedor-texto {
     flex: 1;
     padding: 15px;
+    min-width: 0; /* Permite que el texto se ajuste correctamente */
 }
 
-.contenedor-principal .texto p {
+/* Estilos para el texto dentro de los contenedores */
+.contenedor-texto p {
     margin: 0;
     line-height: 1.6;
     font-size: 16px;
 }
 
+/* Contenedor de imagen con tamaño fijo */
 .contenedor-imagen {
     flex-shrink: 0;
-    width: 500px;
-    height: 500px;
+    /* Tamaño fijo  */
+    width: 200px;
+    height: 200px;
     background-color: #f0f0f0;
     padding: 10px;
     border: 1px solid #d1d1d1;
@@ -124,11 +153,76 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* Asegura que la imagen no deforme el contenedor */
+    overflow: hidden;
 }
 
+/* Estilos para las imágenes dentro de los contenedores */
 .contenedor-imagen img {
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
     border-radius: 5px;
+}
+
+/* Pie de pagina*/
+
+/* Contenedor del pie de página */
+.pie-pagina {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Contenedor interno para el contenido del pie de página */
+.contenedor-pie {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*Modificaciones a ID*/
+
+/* Sección contenedora de las promociones */
+.seccion-promociones {
+    margin: 40px 0;
+    padding: 30px;
+    background: linear-gradient(135deg, #fff5e6, #ffe4cc);
+    border-radius: 15px;
+    border: 2px solid #ffb366;
+}
+
+/* Títulos de la sección promociones */
+.seccion-promociones h2 {
+    text-align: center;
+    color: #cc6600;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.seccion-promociones p {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* Contenedor principal de promociones con ID específico */
+#contenedor-promociones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px;
+}
+
+/* Cada item de promoción individual */
+.promocion-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #ffe0b3;
 }

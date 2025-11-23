@@ -8,23 +8,32 @@
 </head>
 <body>
     <header>
-        <div id="FondoBarra"></div>
-        <div id="LogoUNO">
-            <img src="logo provicional.png" alt="LogoUNO" height="150">
+        <!-- Fondo de la barra de navegación -->
+        <div class="fondo-barra"></div>
+        
+        <!-- Logo clickeable que lleva al inicio -->
+        <div class="logo-uno">
+            <a href="index.html">
+                <img src="logo provicional.png" alt="LogoUNO" height="100">
+            </a>
         </div>
-        <div id="OpcionesBarra">
-            <div><a href="index.html">Menu Principal</a></div>
-            <div><a href="Menu.html">Menu</a></div>
-            <div><a href="Galeria.html">Galeria</a></div>
-            <div><a href="Promociones.html">Promociones</a></div>
-            <div><a href="AcercaDe.html">Acerca de</a></div> <!-- Corregí el cierre erróneo -->
-        </div>
+        
+        <!-- Barra de opciones de navegación principal -->
+        <nav class="opciones-barra">
+            <div class="opcion-nav"><a href="Menu.html">Menu</a></div>
+            <div class="opcion-nav"><a href="Galeria.html">Galeria</a></div>
+            <div class="opcion-nav"><a href="Promociones.html">Promociones</a></div>
+            <div class="opcion-nav"><a href="AcercaDe.html">Acerca de</a></div>
+        </nav>
     </header>
 
-    <div id="contenido"> 
+    <!-- Contenido principal de la página -->
+    <main class="contenido-principal"> 
         <h1>Panaderia "LA UNO"</h1>   
-        <div class="contenedor-principal">
-            <div class="texto">
+        
+        <!-- Contenedor principal reutilizable -->
+        <div class="contenedor-flex">
+            <div class="contenedor-texto">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eaque optio dicta cum molestiae sequi? Ipsum maiores aperiam perferendis quia reprehenderit ut rerum culpa, 
                 repellat qui consequuntur, vitae odit vero?</p>
             </div>
@@ -32,6 +41,69 @@
                 <img src="imagenprovicional.jpg" alt="imagencomida">
             </div>
         </div>
-    </div>
+        
+        <!-- CONTENEDOR DE PROMOCIONES CON 4 IMÁGENES -->
+        <section class="seccion-promociones">
+            <h2>Promociones Especiales</h2>
+            <p>Descubre nuestras ofertas exclusivas de la semana</p>
+            
+            <!-- Contenedor con ID para promociones -->
+            <div id="contenedor-promociones" class="contenedor-promociones">
+                <!-- Promoción 1 -->
+                <div class="promocion-item">
+                    <img src="promo1.jpg" alt="Promoción 1 - Pan Francés" class="imagen-promocion">
+                    <div class="info-promocion">
+                        <h3>Pan Francés x2</h3>
+                        <p class="precio-original">$50.00</p>
+                        <p class="precio-promocion">$35.00</p>
+                        <span class="descuento">30% OFF</span>
+                    </div>
+                </div>
+                
+                <!-- Promoción 2 -->
+                <div class="promocion-item">
+                    <img src="promo2.jpg" alt="Promoción 2 - Conchas" class="imagen-promocion">
+                    <div class="info-promocion">
+                        <h3>Docena de Conchas</h3>
+                        <p class="precio-original">$180.00</p>
+                        <p class="precio-promocion">$120.00</p>
+                        <span class="descuento">33% OFF</span>
+                    </div>
+                </div>
+                
+                <!-- Promoción 3 -->
+                <div class="promocion-item">
+                    <img src="promo3.jpg" alt="Promoción 3 - Cuernitos" class="imagen-promocion">
+                    <div class="info-promocion">
+                        <h3>Cuernitos Mix</h3>
+                        <p class="precio-original">$240.00</p>
+                        <p class="precio-promocion">$180.00</p>
+                        <span class="descuento">25% OFF</span>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <div class="contenedor-flex">
+            <div class="contenedor-texto">
+                <h2></h2>
+                <p>
+                Orgullosos de nuestra primera sucursal en metro "Division del norte"
+                </p>
+            </div>
+            <div class="contenedor-imagen" >
+                <img src="imagenprovicional.jpg" alt="imagenrestaurante" id="">
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="pie-pagina">
+        <div class="contenedor-pie">    
+            <p>Aureliano</p>
+            <p>Programacion WEB</p>    
+        </div>
+    </footer>
 </body>
 </html>
