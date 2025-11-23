@@ -1,14 +1,134 @@
-html,body{
+html, body {
     height: 100%;
     margin: 0;
+    padding: 0;
     background-color: blanchedalmond;
+    font-family: Arial, sans-serif;
 }
 
-#OpcionesBarra{
-    position: absolute;
+/* Header y Navegacion */
+#FondoBarra {
+    position: fixed;
     top: 0;
     left: 0;
     background-color: oldlace;
     width: 100%;
-    height: 300;
+    height: 150px;
+    z-index: 10;
+}
+/*Fijar logo en la esquina superior izquierda*/
+#LogoUNO {
+    position: fixed;
+    top: 0px;    
+    left: 1%;
+    z-index: 20;
+}
+/*Acomoda la imagen para tener una medida de 150 de alto*/
+#LogoUNO img {
+    display: block;
+    height: 150px;
+    width: auto;
+}
+
+#OpcionesBarra {
+    display: flex;
+    position: fixed;
+    top: 0;
+     /*Distancia para no chocar con el logo*/
+    left: 160px;
+    background-color: aqua;
+    height: 150px;
+    /* Acomoda el ancho para que no cambie aunque se cambie
+    el tamaño de la pestaña */
+    width: calc(100% - 160px); 
+    z-index: 15;
+    /* Distribuye el espacio uniformemente */
+    justify-content: space-around; 
+    align-items: center;
+    padding: 0 10px;
+}
+
+#OpcionesBarra div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    height: 80%;
+    background-color: rgb(166, 238, 107);
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/*Cuando el usuario pone el cursor cambia el color*/
+#OpcionesBarra div:hover {
+    background-color: rgb(140, 220, 80);
+}
+
+#OpcionesBarra a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+/* Contenido principal */
+#contenido {
+    margin: 160px 20px 20px 20px; /* Aumenté el margen superior para evitar superposición */
+    background-color: rgb(146, 23, 1);
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+}
+
+/*Titilos */
+#contenido h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.contenedor-principal {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #98a89d;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #000000;
+}
+
+.contenedor-principal .texto {
+    flex: 1;
+    padding: 15px;
+}
+
+.contenedor-principal .texto p {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.contenedor-imagen {
+    flex-shrink: 0;
+    width: 500px;
+    height: 500px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #d1d1d1;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-imagen img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
 }
